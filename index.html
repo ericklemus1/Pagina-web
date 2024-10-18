@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Lemus</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+
+<!-- Pantalla de carga -->
+<div id="pantalla-carga">
+    <div class="logo-carga">
+        <img src="images/logo.png" alt="Logo de MINI LEMUS">
+    </div>
+    <div class="barra-carga">
+        <div id="progreso" class="progreso"></div>
+    </div>
+    <p id="porcentaje-carga">0%</p>
+</div>
+
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#footer">Nosotros</a></li>
+                <li><a href="#productos">Categorías</a></li>
+                <li><a href="#galeria">Productos</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sección del Carrusel -->
+        <div class="carousel">
+            <div class="carousel-slide active">
+                <img src="images/1.jpg" alt="Imagen 1">
+                <div class="carousel-text">
+                    <h1>MINI LEMUS</h1>
+                    <p>Precios bajos, sonrisas altas</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/2.jpg" alt="Imagen 2">
+                <div class="carousel-text">
+                    <h1>MINI LEMUS</h1>
+                    <p>Precios bajos, sonrisas altas</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/3.jpg" alt="Imagen 3">
+                <div class="carousel-text">
+                    <h1>MINI LEMUS</h1>
+                    <p>Precios bajos, sonrisas altas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Categorías -->
+        <section id="productos" class="productos-section">
+            <h2>Nuestras Categorías de Productos</h2>
+            <div class="productos-grid">
+                <div class="producto-item">
+                    <img src="images/carne-de-vaca.png" alt="Carnes">
+                    <h3>Carnes</h3>
+                    <p>Saborea la esencia del sabor en nuestras exquisitas carnes</p>
+                </div>
+                <div class="producto-item">
+                    <img src="images/verduras.png" alt="Verduras y frutas">
+                    <h3>Verduras y frutas</h3>
+                    <p>Frutas y verduras de temporada, frescas y llenas de sabor, para deleite de tu paladar</p>
+                </div>
+                <div class="producto-item">
+                    <img src="images/refresco.png" alt="Refrescos">
+                    <h3>Refrescos</h3>
+                    <p>Refrescos y bebidas frescas, para una experiencia de sabor única</p>
+                </div>
+                <div class="producto-item">
+                    <img src="images/bocadillo.png" alt="Snacks">
+                    <h3>Snacks</h3>
+                    <p>Snacks deliciosos y variados, para cualquier momento y gusto</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de la Galería -->
+        <section id="galeria" class="galeria-section">
+            <h2>Nuestros Productos</h2>
+            <div class="galeria-grid">
+                <!-- Imagenes -->
+                <div class="galeria-item">
+                    <img src="images/zanahoria.png" alt="Galería 1">
+                </div>
+                <div class="galeria-item">
+                    <img src="images/carne.png" alt="Galería 2">
+                </div>
+                <div class="galeria-item">
+                    <img src="images/consome.png" alt="Galería 3">
+                </div>
+                <div class="galeria-item">
+                    <img src="images/limones.png" alt="Galería 4">
+                </div>
+                <div class="galeria-item">
+                    <img src="images/maseca.png" alt="Galería 5">
+                </div>
+                <div class="galeria-item">
+                    <img src="images/espagueti.png" alt="Galería 6">
+                </div>
+                <div class="galeria-item">
+                    <img src="images/salvita.png" alt="Galería 7">
+                </div>
+                <div class="galeria-item">
+                    <img src="images/oreo.png" alt="Galería 8">
+                </div>
+                <div class="galeria-item hidden">
+                    <img src="images/manzanas.png" alt="Galería 9">
+                </div>
+                <div class="galeria-item hidden">
+                    <img src="images/pañales.png" alt="Galería 10">
+                </div>
+
+            </div>
+            <button id="mostrar-mas">Mostrar más</button>
+        </section>
+    </header>
+
+    <div class="modal" id="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Imagen ampliada">
+    </div>
+
+    <footer id="footer">
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>MINI LEMUS | Horario: 7:00 AM - 10:00 PM</p>
+        <p>&copy; 2024 Mercadito Mini Lemus - Todos los derechos reservados</p>
+        <p>Diseñado por: <a href="https://www.instagram.com/ericklemus_30/?next=%2F" target="_blank">Erick Lemus</a></p>
+    </footer>
+</section>
+</header>
+<script src="js/scripts.js"></script>
+</body>
+</html>
