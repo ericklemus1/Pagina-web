@@ -1,0 +1,330 @@
+/* General */ 
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Estilos para la pantalla de carga */
+#pantalla-carga {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3d2922;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    color: white;
+}
+
+.logo-carga img {
+    width: 150px;
+    animation: movimiento 2s infinite ease-in-out;
+}
+
+@keyframes movimiento {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.barra-carga {
+    width: 80%;
+    background-color: #fefdfd;
+    height: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.progreso {
+    width: 0;
+    height: 100%;
+    background-color: #ff9a52;
+    border-radius: 10px;
+    transition: width 0.2s;
+}
+
+#porcentaje-carga {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+
+    margin: 0;
+    font-family: 'Quicksand', 'Bebas Neue';
+}
+
+header {
+    background-color: #3d2922;
+    color: rgb(0j3696, 0, 0);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo img {
+    height: 80px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 60px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 140%;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del Carrusel */
+.carousel {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 760px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.carousel-text h1 {
+    font-size: 70px;
+    font-family: 'Bebas Neue';
+}
+
+.carousel-text p {
+    font-size: 40px;
+    font-family: 'Bebas Neue';
+}
+
+/* Efecto de deslizamiento */
+.carousel-slide.active {
+    display: block;
+}
+
+/* Opcional: Puntos de navegación */
+.carousel-dots {
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel-dots span {
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.carousel-dots span.active {
+    background-color: #333;
+}
+
+/* Sección de Productos */
+.productos-section {
+    padding: 50px 20px;
+    background-color: #ff9a52;
+    text-align: center;
+}
+
+.productos-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.producto-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.producto-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.producto-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.producto-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.producto-item:hover {
+    transform: translateY(-10px);
+}
+
+.galeria-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Galería de Imágenes */
+.galeria-section {
+    padding: 50px 20px;
+    background-color: #ff9a52;
+    text-align: center;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria-item img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-galeria {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #42302e;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.btn-galeria:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+
+footer {
+    background-color: #3d2922;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #060606;
+}
+
+footer p {
+    margin: 5px 0;
+    font-family: 'Poppins', sans-serif;
+
+footer a {
+    color: #e8e6e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Clase para desenfocar la imagen */
+.imagen-desenfocada {
+    filter: blur(5px); /* Ajusta el nivel de desenfoque */
+    overflow: hidden; /* Evita el desbordamiento */
+}
